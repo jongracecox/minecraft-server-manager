@@ -1,0 +1,28 @@
+[general]
+# Set the base URL for your Streamlit app
+baseUrl = "http://0.0.0.0"
+
+[server]
+# Set the port number for your Streamlit app
+port = 8501
+
+[theme]
+# Set the theme for your Streamlit app
+primaryColor = "#1E88E5"
+backgroundColor = "#F5F5F5"
+[browser]
+
+# Turn off Streamlit usage stats
+gatherUsageStats = false
+
+[logger]
+# Level of logging: 'error', 'warning', 'info', or 'debug'.
+# Default: 'info'
+level = "info"
+
+# String format for logging messages. If logger.datetimeFormat is set,
+# logger messages will default to `%(asctime)s.%(msecs)03d %(message)s`. See
+# Python's documentation for available attributes:
+# https://docs.python.org/2.6/library/logging.html#formatter-objects
+# Default: "%(asctime)s %(message)s"
+messageFormat = "%(asctime)s %(message)s"
