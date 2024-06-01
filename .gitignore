@@ -1,3 +1,9 @@
 settings.ini
 servers/
 downloads/
+venv/
+*.pid
+*.out
+*.sqlite
+__pycache__/
+*.pyc

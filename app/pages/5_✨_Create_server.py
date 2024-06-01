@@ -10,6 +10,10 @@ st.title("Minecraft Server Manager")
 
 server_name = st.text_input("Server name", key="server_name")
 server_version = st.text_input("Version", key="server_version")
+st.markdown(
+    "You can find the latest Java Edition versions [here](https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs)"
+)
+
 server_port_number = st.text_input("Port number", key="server_port_number", value=str(server_manager.next_port_number))
 
 if st.button("Create"):

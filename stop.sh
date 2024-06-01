@@ -2,8 +2,6 @@
 
 SCRIPT_DIR="$(cd "$(dirname "$0")"; pwd)"
 PID_FILE="$SCRIPT_DIR/streamlit_server.pid"
-HOME="/Users/$USER"
-PATH=$PATH:/usr/local/bin
 
 if [ -f "$PID_FILE" ]; then
     pid=$(cat "$PID_FILE")

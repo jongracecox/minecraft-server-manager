@@ -5,8 +5,34 @@ from decouple import config
 
 
 @task
+def setup(c):
+    """Create virtual environment."""
+    virtualenv = Path(__file__).parent / Path("venv")
+    if virtualenv.exists():
+        print("Removing existing virtual environment...")
+        c.run("rm -rf venv")
+
+    print("Creating virtual environment...")
+    c.run("python3 -m venv venv")
+
+    print("Installing dependencies...")
+    c.run("venv/bin/pip install --upgrade pip")
+    c.run("venv/bin/pip install -r requirements.txt")
+
+    print("Checking for settings.ini...")
+    settings = Path(__file__).parent / Path("settings.ini")
+    if not settings.exists():
+        c.run("cp settings.ini.template settings.ini")
+    
+    install_mc_wrapper(c)
+    
+    print("Setup complete.")
+
+
+@task
 def install_mc_wrapper(c):
     """Install mcwrapper."""
+    print("Installing mcwrapper...")
     c.run("gem install mcwrapper")
 
 

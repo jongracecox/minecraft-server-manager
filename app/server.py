@@ -388,6 +388,9 @@ class ServerManager(ServerBase):
         session_server = st.session_state.get('server', None)
 
         if session_server:
-            pre_selected_index = server_list.index(session_server)
+            try:
+                pre_selected_index = server_list.index(session_server)
+            except ValueError:
+                pass
 
         return server_list, pre_selected_index
