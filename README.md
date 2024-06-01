@@ -95,6 +95,26 @@ commands:
 
 ![](docs/images/command-time-set-day.png)
 
+## Changing game rules and the weather
+
+An easy interface is provided for changing various game rules and the weather:
+
+![](docs/images/change-game-rules.png)
+
+![](docs/images/change-weather.png)
+
+## Taking backups
+
+Backups can be easily created. This is recommended when you have world that you've
+put a lot of effort into, or when inviting guests to play in your worlds.
+
+![](docs/images/backups.png)
+
+Note that there is no automated mechanism for restoring worlds. This can be done
+manually. The goal is to provide a mechanism where my kids can create backups regularly,
+and, as an admin, I can restore them manually in the very occasional situation that
+it is required.
+
 ## Updating server properties
 
 You can change server properties using the **Properties** menu. After making a change to
